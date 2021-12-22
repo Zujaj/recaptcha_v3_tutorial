@@ -1,16 +1,82 @@
 # recaptcha_v3_tutorial
 
-A new Flutter project.
+![Depiction of Bot Attack on a Web Form.](https://miro.medium.com/max/2708/1*i_asQCziUxW3PaBFbAH4Kw.jpeg)
+As a **web developer,** do you want to:
+
+🛡️ Secure the website traffic from spam data?
+
+🧹 Detect bots injecting malicious code in web forms?
+
+📈 Integrate a ready-made solution for risk analysis?
+
+This project is a demo tutorial through which you can learn the implementation of Google reCAPTCHA v3 in Flutter Web.
+
+To get into more details, [read the below medium article](#medium-article).
+
+## Project Structure
+
+```dart
+recaptcha_v3_tutorial
+├─ lib
+│  ├─ config 
+│  │  └─ config.dart // Holds the confidential information.
+│  ├─ model
+│  │  └─ recaptcha_response.dart // Holds the Google reCAPTCHA v3 HTTP Response.
+│  ├─ page
+│  │  └─ demo_page.dart // A Demo Page with a [FlutterLogo],a [NameField] & an [ElevatedButton].
+│  ├─ service
+│  │  └─ recaptcha_service.dart // Holds the Google reCAPTCHA v3 Operations.
+│  ├─ widget
+│  │   ├─ info_dialog.dart // Shows an [AlertDialog] to the user.  
+│  │   └─ name_field.dart // Shows a custom [TextFormField] to the user.  
+│  ├─ main.dart
+├─  web
+│  ├─ index.html
+├─ pubspec.lock
+├─ pubspec.yaml
+├─ README.md
+```
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. Register your site via the [Google reCAPTCHA](https://www.google.com/recaptcha/about).
 
-A few resources to get you started if this is your first Flutter project:
+    ![Illustration of Google reCAPTCHA v3 Site Registration Form](https://miro.medium.com/max/652/1*7OhtC2p23W5dQ5S6NPihdg.png)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+2. Copy the reCAPTCHA v3 `site` and `secret` keys.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+    ![Illustration of Google reCAPTCHA v3 Site and Secret Keys.](https://miro.medium.com/max/700/1*hZOIPNiFfIZNzjWZWVPTCA.png)
+
+3. Navigate to the `web` folder, open the `index.html` file and paste the below script inside the `<body>` tag.
+
+    ```html
+    <body>
+     <script src="https://www.google.com/recaptcha/api.js?render=recaptcha-site-key"></script>
+     <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+    </body>
+    ```
+
+4. In the `config.dart` file, paste the reCAPTCHA `site` & `secret` key.
+
+    ```dart
+    /// Holds the 'Site Key' for the `Google reCAPTCHA v3` API.
+    static const String siteKey = 'recaptcha-site-key';
+
+    /// Holds the 'Secret Key' for the `Google reCAPTCHA v3` API.
+    static const String secretKey = 'recaptcha-secret-key';
+    ```
+
+5. Congratulations! You're done, run the app.
+
+    ![Demo of the Google reCAPTCHA v3 in Flutter Web](https://miro.medium.com/max/700/1*GZE7rGDgL8pIYDOkZHcruw.gif)
+  
+## TOOLS & LANGUAGE
+
+- [Microsoft Visual Studio Code](https://code.visualstudio.com/download)
+- [Flutter](https://flutter.dev/)
+
+## MEDIUM ARTICLE
+
+<a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@zujaj/0"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@zujaj/0" alt="How To Implement Google reCAPTCHA v3 in Flutter Web"/>
