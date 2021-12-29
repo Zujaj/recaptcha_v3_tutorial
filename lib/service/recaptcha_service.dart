@@ -9,7 +9,7 @@ class RecaptchaService {
   /// Holds the response token.
   static String _token = '';
 
-  /// Prevents from object instantiation.
+  /// Prevents from class instantiation.
   RecaptchaService._();
 
   /// Loads the `Google reCAPTCHA V3` API.
