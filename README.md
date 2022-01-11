@@ -9,9 +9,7 @@ As a **web developer,** do you want to:
 
 📈 Integrate a ready-made solution for risk analysis?
 
-This project is a demo tutorial through which you can learn the implementation of Google reCAPTCHA v3 in Flutter Web.
-
-To get into more details, [read the below medium article](#medium-article).
+This project is a demo tutorial through which you can learn the [implementation of Google reCAPTCHA v3 in Flutter Web](https://levelup.gitconnected.com/how-to-implement-google-recaptcha-v3-in-flutter-web-38000139bbc0).
 
 ## Project Structure
 
@@ -76,7 +74,3 @@ recaptcha_v3_tutorial
 
 - [Microsoft Visual Studio Code](https://code.visualstudio.com/download)
 - [Flutter](https://flutter.dev/)
-
-## MEDIUM ARTICLE
-
-<a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@zujaj/0"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@zujaj/0" alt="How To Implement Google reCAPTCHA v3 in Flutter Web"/>
